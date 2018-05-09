@@ -89,6 +89,7 @@ module "ec2" {
   instance_type = "${var.instance_type}"
   subnet_id     = "${module.subnet.aws_subnet}"
   key_name      = "${module.key_pair.aws_keypair_name}"
+  private_ip    = "${var.private_ip}"
 
   tags = {
     Name = "${lookup(var.tags, "Name")}"

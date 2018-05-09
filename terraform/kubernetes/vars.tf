@@ -11,6 +11,10 @@ variable "cidr" {
   default = "10.20.0.0/24"
 }
 
+variable "private_ip" {
+  default = "10.20.0.100"
+}
+
 variable "region" {
   default = "us-east-1"
 }
@@ -28,7 +32,7 @@ variable "sgname" {
 }
 
 variable "instance_type" {
-  default = "t2.micro"
+  default = "m4.large"
 }
 
 variable "ami" {
