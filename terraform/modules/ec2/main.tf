@@ -8,7 +8,9 @@ resource "aws_instance" "main" {
 
   user_data = <<-EOF
               #!/bin/bash
-              apt-get install ansible python -y
+              sudo apt-get update
+              sudo apt-get install ansible python -y
+              sudo ansible-playbook -i "localhost," -c local /mytest/ansible/k8s-wordpress/site.yml
               git clone https://github.com/correiabrux/mytest.git
               EOF
 
