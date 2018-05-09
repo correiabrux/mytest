@@ -6,3 +6,4 @@
     gather_facts: True
     roles:
       - install_k8s
+      - wordpress_mysql
