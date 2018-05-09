@@ -9,7 +9,7 @@ resource "aws_instance" "main" {
   user_data = <<-EOF
               #!/bin/bash
               apt-get install ansible python -y
-              git clone https://github.com/correiabrux/devopsclub.git
+              git clone https://github.com/correiabrux/mytest.git
               EOF
 
   tags = {
