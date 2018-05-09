@@ -73,7 +73,7 @@
 - name: upp mysql + wordpress
   shell: |
     export KUBECONFIG=/etc/kubernetes/admin.conf
-    kubectl create secret generic mysql-pass –from-literal=password=YOUR_PASSWORD
+    kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
     kubectl create -f /mytest/k8s_manifests/wordpress/mysql.yml
     kubectl create -f /mytest/k8s_manifests/wordpress/wordpress.yml
 
